@@ -33,9 +33,9 @@ services:
 
     md:
       # metadata used in capabilities documents
-      title: Mapproxy demo map
-      abstract: The map showing how QGIS Server interacts with Mapproxy.
-      online_resource: http://kartoza.com/
+      title: Brecht maps
+      abstract: 
+      online_resource: 
       contact:
         person: Brecht Van Maldergem
         position: GIS Passionate
@@ -45,9 +45,8 @@ services:
         postcode:
         country: Belgium
         phone:
-        email:
+        email: brecht.vanmaldergem@gmail.com
       access_constraints:
-        Insert license and copyright information for this service.
       fees: 'None'
   tms:
     use_grid_names: true
