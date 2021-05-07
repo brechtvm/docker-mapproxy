@@ -34,7 +34,7 @@ services:
     md:
       # metadata used in capabilities documents
       title: Brecht maps
-      abstract: 
+      abstract: A proxy to the world
       online_resource: 
       contact:
         person: Brecht Van Maldergem
