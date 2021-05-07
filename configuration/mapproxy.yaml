@@ -35,7 +35,7 @@ services:
       # metadata used in capabilities documents
       title: Brecht maps
       abstract: A proxy to the world
-      online_resource: 
+      online_resource: http://ameleon.be
       contact:
         person: Brecht Van Maldergem
         position: GIS Passionate
