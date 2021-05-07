@@ -47,6 +47,7 @@ services:
         phone:
         email: brecht.vanmaldergem@gmail.com
       access_constraints:
+        Insert license and copyright information for this service.
       fees: 'None'
   tms:
     use_grid_names: true
