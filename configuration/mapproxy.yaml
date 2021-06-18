@@ -57,6 +57,9 @@ layers:
   - name: CartoWeb
     title: CartoWeb
     sources: [cartoweb_cache]
+  - name: osm
+    title: Open Streetmap Tiles
+    sources: [osm_cache] #this layer should use the osm_cache (defined below) as it's source.
 
 caches:
 
@@ -70,6 +73,9 @@ caches:
     cache:
       type: mbtiles
       filename: cartoweb.mbtiles
+  osm_cache:
+    sources: [osm_tiles] #here you set what source data (defined below) you want to cache
+    format: image/png
   
 sources:
   cartoweb_wms:
@@ -77,6 +83,11 @@ sources:
      req:
        url: https://cartoweb.wms.ngi.be/service?
        layers: topo
+  osm_tiles:
+     #the osm_tiles source refers to the openstreetmap.org tiles. These will be downloaded upon request (if not already cached) and served by MapProxy
+     type: tile
+     url: http://c.tile.openstreetmap.org/%(tms_path)s.%(format)s
+     grid: osm_grid #the grid to use for the osm tiles. This is really important. It is specified below.
 
 grids:
   osm_grid:
@@ -86,10 +97,18 @@ grids:
 
 globals:
   cache:
+    # where to store the cached images
+    base_dir: './cache_data'
+    # where to store lockfiles
+    lock_dir: './cache_data/locks'
     meta_size: [6, 6]
     meta_buffer: 20
-    lock_dir: './cache_data/locks'
     # where to store lockfiles for tile creation
     tile_lock_dir: './cache_data/tile_locks'
   http:
     ssl_no_cert_checks: true
+
+  # image/transformation options
+  image:
+      resampling_method: bilinear
+      jpeg_quality: 90
