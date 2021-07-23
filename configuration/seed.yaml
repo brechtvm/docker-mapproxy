@@ -9,11 +9,10 @@
 seeds:
   cartoweb_seed:
     caches: [cartoweb_cache]
-    grids: [osm_grid]
+    grids: [webmercator_grid]
     # coverages: []
     refresh_before:
       weeks: 4  
     levels:
       from: 6
       to: 20
-      
