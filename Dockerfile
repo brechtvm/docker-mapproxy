@@ -31,6 +31,7 @@ ENV \
 
 ADD uwsgi.ini /settings/uwsgi.default.ini
 ADD start.sh /start.sh
+ADD seed.sh /seed.sh
 RUN chmod 0755 /start.sh
 RUN mkdir -p /mapproxy /settings
 RUN groupadd -r mapproxy -g 10001 && \
