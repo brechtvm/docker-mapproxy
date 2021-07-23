@@ -12,7 +12,7 @@ services:
     volumes:
       - ./data:/web
   mapproxy:
-    image: kartoza/mapproxy
+    image: custommapproxy
     environment:
       - PRODUCTION=true
       - PROCESSES=4
