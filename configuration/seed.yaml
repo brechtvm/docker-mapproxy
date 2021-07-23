@@ -17,11 +17,11 @@ seeds:
     levels:
       from: 6
       to: 20
-  coverages:
-    belgium:
-      bbox: [2.5141,49.4751,6.4442,51.5645]
-      srs: EPSG:4326
-    zottegem:
-      bbox: [3.718427,50.824956,3.896955,50.915738]
-      srs: EPSG:4326
+coverages:
+  belgium:
+    bbox: [2.5141,49.4751,6.4442,51.5645]
+    srs: EPSG:4326
+  zottegem:
+    bbox: [3.718427,50.824956,3.896955,50.915738]
+    srs: EPSG:4326
       
