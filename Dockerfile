@@ -32,11 +32,12 @@ ENV \
 ADD uwsgi.ini /settings/uwsgi.default.ini
 ADD start.sh /start.sh
 ADD seed.sh /seed.sh
-RUN chmod 0755 /start.sh /seed.sh
+ADD seed_summary.sh /seed_summary.sh
+RUN chmod 0755 /start.sh /seed.sh /seed_summary.sh
 RUN mkdir -p /mapproxy /settings
 RUN groupadd -r mapproxy -g 10001 && \
     useradd -m -d /home/mapproxy/ --gid 10001 -s /bin/bash -G mapproxy mapproxy
-RUN chown -R mapproxy:mapproxy /mapproxy /settings /start.sh /seed.sh
+RUN chown -R mapproxy:mapproxy /mapproxy /settings /start.sh /seed.sh /seed_summary.sh
 VOLUME [ "/mapproxy"]
 USER mapproxy
 ENTRYPOINT [ "/start.sh" ]
