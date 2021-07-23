@@ -70,7 +70,7 @@ caches:
     concurrent_tile_creators: 2
     cache:
       type: mbtiles
-      filename: cartoweb.mbtiles
+      filename: /mapproxy/cartoweb.mbtiles
   osm_cache:
     sources: [osm_tiles] #here you set what source data (defined below) you want to cache
     format: image/png
