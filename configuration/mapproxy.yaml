@@ -70,7 +70,7 @@ caches:
     concurrent_tile_creators: 2
     cache:
       type: mbtiles
-      filename: /mapproxy/cartoweb.mbtiles
+      filename: /mapproxy/ngi_cartoweb.mbtiles
   osm_cache:
     sources: [osm_tiles] #here you set what source data (defined below) you want to cache
     format: image/png
@@ -81,9 +81,9 @@ sources:
      req:
        url: https://cartoweb.wms.ngi.be/service?
        layers: topo
-     coverage:
-       bbox: [2.5141,49.4751,6.4442,51.5645]   #BE
-       srs: EPSG:4326
+    #  coverage:
+    #    bbox: [2.5141,49.4751,6.4442,51.5645]   #BE
+    #    srs: EPSG:4326
     
   osm_tiles:
      #the osm_tiles source refers to the openstreetmap.org tiles. These will be downloaded upon request (if not already cached) and served by MapProxy
