@@ -9,7 +9,7 @@
 seeds:
   cartoweb_seed:
     caches: [cartoweb_cache]
-    coverages: [zottegem]
+    coverages: [belgium]
     grids: [webmercator_grid]
     refresh_before:
       weeks: 4  
@@ -20,7 +20,7 @@ coverages:
   belgium:
     datasource: '/mapproxy/belgium.geojson'
     srs: 'EPSG:4326'
-  # zottegem:
-  #   bbox: [3.718427,50.824956,3.896955,50.915738]
-  #   srs: EPSG:4326
+  zottegem:
+    bbox: [3.718427,50.824956,3.896955,50.915738]
+    srs: EPSG:4326
       
