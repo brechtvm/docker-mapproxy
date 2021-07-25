@@ -64,6 +64,8 @@ caches:
   cartoweb_cache:
     #sources: [cartoweb_wms] 
     sources: [] # You can set the sources to an empty list, if you use an existing MBTiles file and do not have a source.
+    upscale_tiles: 1
+    downscale_tiles: 1
     grids: [webmercator_grid]
     meta_size: [5,5]
     meta_buffer: 20
