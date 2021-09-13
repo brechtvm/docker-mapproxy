@@ -60,17 +60,17 @@
 
 
 
-     var overlay_airports = L.tileLayer.wms('http://localhost/mapproxy/service?', {
-        layers: 'airports',
+     var overlay_cartoweb = L.tileLayer.wms('http://brechtvm.ddns.net:8080/mapproxy/service?', {
+        layers: 'Cartoweb',
         format: 'image/png',
-        uppercase: true,
-        transparent: true,
-        continuousWorld: true,
-        opacity: 1.0
+        // uppercase: true,
+        // transparent: true,
+        // continuousWorld: true,
+        // opacity: 1.0
     });
 
-    map.addLayer(overlay_airports);
-    L.stamp(overlay_airports);
+    map.addLayer(overlay_cartoweb);
+    L.stamp(overlay_cartoweb);
 
     var overlay_hillshade = L.tileLayer.wms('http://localhost/mapproxy/service?', {
         layers: 'Hillshade',
