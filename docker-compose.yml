@@ -38,6 +38,9 @@ services:
       - mapproxy
     ports:
     - 80:80
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.whoami.rule=Host(`mapproxy.localhost`)
 
 
 
