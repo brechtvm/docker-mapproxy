@@ -60,7 +60,7 @@
 
 
 
-     var overlay_cartoweb = L.tileLayer.wms('http://localhost/mapproxy/service?', {
+     var overlay_cartoweb = L.tileLayer.wms(window.location.hostname + 'mapproxy/service?', {
         layers: 'CartoWeb',
         format: 'image/png',
         // uppercase: true,
