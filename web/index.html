@@ -58,10 +58,7 @@
 
 	var base_map_2 = L.tileLayer.wms('', {});
 
-
-
-    var overlay_cartoweb_url = 'mapproxy/service?'
-    var overlay_cartoweb = L.tileLayer.wms(overlay_cartoweb_url, {
+    var overlay_cartoweb = L.tileLayer.wms('mapproxy/service?', {
         layers: 'CartoWeb',
         format: 'image/png',
         // uppercase: true,
@@ -73,7 +70,7 @@
     map.addLayer(overlay_cartoweb);
     L.stamp(overlay_cartoweb);
 
-    var overlay_hillshade = L.tileLayer.wms('http://localhost/mapproxy/service?', {
+    var overlay_hillshade = L.tileLayer.wms('mapproxy/service?', {
         layers: 'Hillshade',
         format: 'image/png',
         uppercase: true,
@@ -86,7 +83,7 @@
     map.addLayer(overlay_hillshade);
     L.stamp(overlay_hillshade);
 
-    var overlay_srtm = L.tileLayer.wms('http://localhost/mapproxy/service?', {
+    var overlay_srtm = L.tileLayer.wms('mapproxy/service?', {
         layers: 'SRTM',
         format: 'image/png',
         uppercase: true,
